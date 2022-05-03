@@ -30,4 +30,4 @@ Além disso, os testes automtizados foram construídos no backend com o **Jest**
 
 ## 🧠 Créditos e Agradecimentos
 
-Gostaria de agradecer a Rocketseat pelo conteúdo fantástico disponibilizado, sendo todos os créditos do projeto destinados a eles.
+Gostaria de agradecer a [Rocketseat](https://www.rocketseat.com.br/) pelo conteúdo fantástico disponibilizado, sendo todos os créditos do projeto destinados a eles.
