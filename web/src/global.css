@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Configuração de classe global */
+/* .button {
+	@apply bg-violet-500 px-4 h-10 rounded;
+} */
