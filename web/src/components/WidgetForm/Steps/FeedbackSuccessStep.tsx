@@ -12,7 +12,7 @@ export function FeedbackSuccessStep({
 			<header>
 				<CloseButton />
 			</header>
-			<div className="flex felx-col items-center py-10 w-[304px]">
+			<div className="flex flex-col items-center py-10 w-[304px]">
 				<svg
 					width="41"
 					height="40"
