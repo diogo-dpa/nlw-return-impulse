@@ -1,11 +1,15 @@
 import { SubmitFeedbackUseCase } from "./submit-feedback-use-case";
 
+// Spies servem para espionar se uma função foi chamada
+const createFeedbackSpy = jest.fn();
+const sendEmailSpy = jest.fn();
+
 const submitFeedback = new SubmitFeedbackUseCase(
 	{
-		create: async () => {},
+		create: createFeedbackSpy,
 	},
 	{
-		sendMail: async () => {},
+		sendMail: sendEmailSpy,
 	}
 );
 
@@ -19,6 +23,9 @@ describe("Submit Feedback", () => {
 				screenshot: "data:image/png;base64,98981989",
 			})
 		).resolves.not.toThrow();
+
+		expect(createFeedbackSpy).toHaveBeenCalled();
+		expect(sendEmailSpy).toHaveBeenCalled();
 	});
 
 	it("should not be able to submit feedback without type", async () => {
