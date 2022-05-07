@@ -1,0 +1,25 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// Tabelas no plural e letra minúscula
+
+// O Prisma automaticamente converterá os tipos para o SQL
+model Feedback {
+
+  id String @id @default(uuid()) // primary key
+
+  type       String
+  comment    String
+  screenshot String? // opcional
+
+  @@map("feedbacks")
+}
